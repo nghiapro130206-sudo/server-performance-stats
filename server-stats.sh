@@ -5,7 +5,7 @@ top -bn1 | grep "%Cpu(s)" | awk '{print 100-$8 "%\n"}'
    
 
 echo -e  "Total memory usage: \n "
-free -h | grep "Mem" | awk '{print "Used: " $3, "Free:"$4,$3/$2*100"% \n\n"}'
+free -m | grep "Mem" | awk '{print "Used: " $3, "Free:"$4,$3/$2*100"% \n\n"}'
 
 
 echo -e  "Total disk usage:"
